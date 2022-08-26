@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SGCM</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body> 
+        <header>
+            <div id="logo">
+                <img src="img/logo.png" alt="Logo SGCM">
+                <span class="titulo">SGCM</span>
+            </div>
+            <div class="usuarioInfo">
+                <span>Usuário: Administrador (Admin)</span>
+                <span>Papel: ADMIN</span>
+                <a href="javascript:void(0)">Logout</a>
+            </div>
+        </header>
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="atendimento.html">Atendimento</a></li>
+                <li><a href="paciente.html">Pacientes</a></li>
+                <li><a href="profissional.html">Profissionais</a></li>
+                <li><a href="convenios">Convenios</a></li>
+                <li><a href="unidades.html">Unidades</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                
+            </ul>
+        </nav>
+        <main> 
+            <form action="#">
+                <div class="grid-formulario">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+
+                    <label for="registroConselho">Registro</label>
+                    <input type="text" name="registroConselho" id="registroConselho">
+
+                    <label for="especialidade">Especialidades</label>
+                    <select name="especialidade" id="especialidade" required>
+                        <option value=""></option>
+                        <option value="1">Especialidade A</option>
+                        <option value="2">Especialidade B</option>
+                        <option value="3">Especialidade C</option>
+                        <option value="4">Especialidade D</option>
+                        <option value="5">Especialidade E</option>
+                    </select>
+                    <label for="unidade">Unidade</label>
+                    <select name="unidade" id="unidade">
+                        <option value=""></option>
+                        <option value="1">Unidade 1</option>
+                        <option value="2">Unidade 2</option>
+                        <option value="3">Unidade 3</option>
+                        <option value="4">Unidade 4</option>
+                        <option value="5">Unidade 5</option>
+                        <option value="6">Unidade 6</option>
+                    </select>
+
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" id="telefone">
+
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email">
+
+                    
+                </div>
+                <input type="button" value="Cancelar">
+                <input type="button" value="Salvar">
+            
+            </form>
+          
+
+            <!--TABELA-->
+            <table class="tabelaA">
+                <thead>
+                    <!--Atalho criação tr*8-->
+                    <tr class="table-cab">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Registro</th>
+                        <th>Especialidade</th>
+                        <th>Unidade</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                <!--tr*5>td*8{texto $} atalho criação tr td-->
+                    <tr>
+                        <td>texto 1</td>
+                        <td>texto 2</td>
+                        <td>texto 3</td>
+                        <td>texto 4</td>
+                        <td>texto 5</td>
+                        <td>texto 6</td>
+                        <td>texto 7</td>
+                        <td>
+                            <a href="javascript:void(0)">Editar</a>
+                            <a href="javascript:void(0)">Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>texto 1</td>
+                        <td>texto 2</td>
+                        <td>texto 3</td>
+                        <td>texto 4</td>
+                        <td>texto 5</td>
+                        <td>texto 6</td>
+                        <td>texto 7</td>
+                        <td>
+                            <a href="javascript:void(0)">Editar</a>
+                            <a href="javascript:void(0)">Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>texto 1</td>
+                        <td>texto 2</td>
+                        <td>texto 3</td>
+                        <td>texto 4</td>
+                        <td>texto 5</td>
+                        <td>texto 6</td>
+                        <td>texto 7</td>
+                        <td>
+                            <a href="javascript:void(0)">Editar</a>
+                            <a href="javascript:void(0)">Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>texto 1</td>
+                        <td>texto 2</td>
+                        <td>texto 3</td>
+                        <td>texto 4</td>
+                        <td>texto 5</td>
+                        <td>texto 6</td>
+                        <td>texto 7</td>
+                        <td>
+                            <a href="javascript:void(0)">Editar</a>
+                            <a href="javascript:void(0)">Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>texto 1</td>
+                        <td>texto 2</td>
+                        <td>texto 3</td>
+                        <td>texto 4</td>
+                        <td>texto 5</td>
+                        <td>texto 6</td>
+                        <td>texto 7</td>
+                        <td>
+                            <a href="javascript:void(0)">Editar</a>
+                            <a href="javascript:void(0)">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="8">Total de registros: 5</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+        <footer>
+            <span>SGCM - Sistema de Gerenciamento de Clínica Médica</span>
+            <span>Suporte técnico: (68) 99909-9889 | <a href="nalito:suporte.sgcm@ufac.com">suporte.sgcm@ufac.com</a></span>
+        </footer>
+    </body>
+</html>
