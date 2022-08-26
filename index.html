@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>SGCM</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no"> <!--estamos di-->
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +15,7 @@
                 <img src="img/logo.png" alt="Logo SGCM">
                 <span class="titulo">SGCM</span>
             </div>
-            <div class="usuarioInfo">
+            <div id="usuarioInfo">
                 <span>Usuário: Administrador (Admin)</span>
                 <span>Papel: ADMIN</span>
                 <a href="javascript:void(0)" class="botao">Logout</a>
@@ -26,9 +28,18 @@
                 <li><a href="paciente.html">Pacientes</a></li>
                 <li><a href="profissional.html">Profissionais</a></li>
                 <li><a href="convenios">Convenios</a></li>
-                <li><a href="unidades.html">Unidades</a></li>
-                <li><a href="especialidades.html">Especialidades</a></li>
-                <li><a href="usuarios.html">Usuários</a></li>
+                <li id="dropdown">
+                    <a href="javascript:void(0)">
+                        Configurações
+                        <span>&#9660;</span>
+                    </a>
+                    <div id="dropdown-menu">
+                        <a href="unidades.html">Unidades</a>
+                        <a href="especialidades.html">Especialidades</a>
+                        <a href="usuarios.html">Usuários</a>        
+                    </div>
+                </li>
+                
                 
             </ul>
         </nav>
@@ -73,6 +84,15 @@
                 <input type="button" value="Salvar" class="botao">
             
             </form>
+            <div id="comandos">
+                <a href="javascript:void(0)" id="add" class="botao">Adicionar</a>
+                <div>
+                    <form action="">
+                        <label for="busca">Busca</label>
+                        <input type="text" name="busca" id="busca">
+                    </form>
+                </div>
+            </div>
           
 
             <!--TABELA-->

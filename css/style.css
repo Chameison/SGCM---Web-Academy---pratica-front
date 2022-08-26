@@ -5,11 +5,19 @@
    font-family: 'Open Sans', sans-serif;
 
 }
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 /*HEADER E FOOTER*/
 header{
     background-image: linear-gradient(#003366, #336699);
     display: flex;
     justify-content: space-between; /**/
+    flex-wrap: wrap; /*ser divido em multiplas linhas, quando nao couber em uma linha só */
 }
 footer{
     background-color: #003366;
@@ -23,45 +31,42 @@ header, footer{
     color: white;
     padding: 0.5em;
 }
-
-body{
-    background-color: #ccc;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-/* MINHA TABELA
-.table-cab th{
-    padding: 0 10px;
-    background-color: rgb(198, 195, 192);
-}
-tbody{
-    background-color: bisque;
-}
-tfoot{
-    background-color: rgb(150, 194, 233);
-}
-td a{
-    text-decoration: none;
-    color: black;
-}
-
-.tabelaA{
-    text-align: center;
-}
-*/
-div#logo{
-    margin: auto 0;
-}
 div#logo *{
     vertical-align: middle;
     margin-left: 0.5em;
 }
-div#logo span{
+
+div#logo span {
     font-size: 2em;
     font-weight: bold;
 }
+
+div#usuarioInfo span, footer span {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+div#usuarioInfo {
+    text-align: right;
+}
+
+div#usuarioInfo a.botao {
+    border: 1px solid white;
+}
+
+
+/*responsividade do header*/
+@media screen and (max-width: 430px) {
+
+    div#usuarioInfo {
+        margin-top: 1em;
+        text-align: left;
+    }
+    header{
+
+    }
+}
+
 
 /*NAVV*/
 
@@ -88,11 +93,44 @@ nav ul li a:hover{
     color: rgb(49, 49, 49)
 }
 
+/*Configurações - aba menu*/
+nav div#dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: #383838;
+    border: 1px solid white
+    
+}
+
+nav div#dropdown-menu a{
+    display: block;
+}
+
+nav ul li#dropdown:hover div#dropdown-menu {
+    display: block;
+}
+/*responsividade do menu*/
+@media screen and (max-width:700px){
+    nav ul li {
+        display: block;
+        width: 100%;
+        
+    }
+
+    nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /*Tabela*/
 table {
     border-spacing: 0.1em;
     margin: 0.5em auto;
     width: 100%;
+    /*responsivo*/
+    overflow-x: auto; /*fazer uma barra de rolagem caso nao dê o tamanho da tela*/
+    display: block;
 }
 table th{
     background-color: #003366;
@@ -112,7 +150,7 @@ table tbody tr:hover{
     background-color: #cccccc;
 }
 
-table  tfoot td{
+table tfoot td{
     border-top: 1px solid #003366;
     text-align: center;
 }
@@ -123,7 +161,7 @@ table td:last-child{
     white-space: nowrap; /*Como o espaço eme branco é tratado*/
 }
 table td{
-    text-align: center;
+    text-align: center; /*MEU*/
 }
 /* TESTE DE USO DO nth-child()
 table tbody td:nth-child(1, 3){
@@ -133,7 +171,7 @@ table tbody td:nth-child(1, 3){
 /*FORMULARIO*/
 
 form{
-    padding-top: 10px;
+    
     margin:auto;
     text-align: right;
     width: fit-content;
@@ -165,6 +203,25 @@ form div.grid-formulario input, form div.grid-formulario select{
 input:required:invalid, select:required:invalid{
     border: 1px solid red;
 }
+
+/*Responsividade do formulario*/
+@media screen and (max-width: 768px){
+    form div.grid-formulario {
+        grid-template-columns: 1fr;
+    }
+    form{
+        width: 85%;
+        text-align: left;
+    }
+    form div.grid-formulario input, form div.grid-formulario select {
+        width: 100%;
+    }
+  
+}
+
+
+
+
 
 /* Botões */
 
@@ -203,4 +260,16 @@ a.botao.excluir{
 
 a.botao.excluir:hover{
     background-color: rgb(156, 0, 0);
+}
+
+/*MAIN */
+main{
+    padding: 1em;
+    background-image: linear-gradient(#cccccc, white);
+}
+div#comandos{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0.1em;
+    flex-wrap: wrap; /*se nao houver espaço para caber tudo, pode quebrar*/
 }
