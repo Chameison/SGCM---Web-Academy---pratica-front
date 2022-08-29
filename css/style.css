@@ -1,0 +1,276 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+/*HEADER E FOOTER*/
+header{
+    background-image: linear-gradient(#003366, #336699);
+    display: flex;
+    justify-content: space-between; /**/
+    flex-wrap: wrap; /*ser divido em multiplas linhas, quando nao couber em uma linha só */
+}
+footer{
+    background-color: #003366;
+    text-align: center;
+    margin-top: auto;
+}
+footer a, span{
+    color: white;
+}
+header, footer{
+    color: white;
+    padding: 0.5em;
+}
+div#logo *{
+    vertical-align: middle;
+    margin-left: 0.5em;
+}
+
+div#logo span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+div#usuarioInfo span, footer span {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+div#usuarioInfo {
+    text-align: right;
+}
+
+div#usuarioInfo a.botao {
+    border: 1px solid white;
+}
+
+
+/*responsividade do header*/
+@media screen and (max-width: 430px) {
+
+    div#usuarioInfo {
+        margin-top: 1em;
+        text-align: left;
+    }
+    header{
+
+    }
+}
+
+
+/*NAVV*/
+
+nav {
+    background-color: #383838;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+nav ul{
+    margin:0;
+    padding:0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: inline-block;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    background-color: rgb(216, 216, 216);
+    color: rgb(49, 49, 49)
+}
+
+/*Configurações - aba menu*/
+nav div#dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: #383838;
+    border: 1px solid white;
+    box-shadow: ;
+    
+}
+
+nav div#dropdown-menu a{
+    display: block;
+}
+
+nav ul li#dropdown:hover div#dropdown-menu {
+    display: block;
+}
+/*responsividade do menu*/
+@media screen and (max-width:700px){
+    nav ul li {
+        display: block;
+        width: 100%;
+        
+    }
+
+    nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*Tabela*/
+table {
+    border-spacing: 0.1em;
+    margin: 0.5em auto;
+    width: 100%;
+    /*responsivo*/
+    overflow-x: auto; /*fazer uma barra de rolagem caso nao dê o tamanho da tela*/
+    display: block;
+}
+table th{
+    background-color: #003366;
+    color:white;
+}
+table td, table th {
+    padding: 0.5em;
+}
+table tbody tr:nth-child(odd) {
+    background-color: #c6d4e2;
+}
+table tbody tr:nth-child(even) {
+    background-color: #e7ecf1
+}
+
+table tbody tr:hover{
+    background-color: #cccccc;
+}
+
+table tfoot td{
+    border-top: 1px solid #003366;
+    text-align: center;
+}
+
+table td:last-child{
+    width: 1%;
+    text-align: center;
+    white-space: nowrap; /*Como o espaço eme branco é tratado*/
+}
+table td{
+    text-align: center; /*MEU*/
+}
+/* TESTE DE USO DO nth-child()
+table tbody td:nth-child(1, 3){
+    background-color: aqua;
+} */
+
+/*FORMULARIO*/
+
+form{
+    
+    margin:auto;
+    text-align: right;
+    width: fit-content;
+}
+
+form div.grid-formulario {
+    display: grid;
+    grid-template-columns: max-content max-content; /**/
+    gap: 0.5em;
+    align-items: center; 
+    margin-bottom: 0.5em;
+}
+
+form label::after{
+    content: ':';
+} /*ele vai pegar um espaço imediatamento depois do elemento que for selecionado*/
+
+input,select {
+    height: 2em;
+    border: 1px solid #757575;
+    box-sizing: border-box;
+    
+}
+
+form div.grid-formulario input, form div.grid-formulario select{
+    width: 18em;
+}
+
+input:required:invalid, select:required:invalid{
+    border: 1px solid red;
+}
+
+/*Responsividade do formulario*/
+@media screen and (max-width: 768px){
+    form div.grid-formulario {
+        grid-template-columns: 1fr;
+    }
+    form{
+        width: 85%;
+        text-align: left;
+    }
+    form div.grid-formulario input, form div.grid-formulario select {
+        width: 100%;
+    }
+  
+}
+
+
+
+
+
+/* Botões */
+
+a.botao, input[type="button"], input[type="submit"] {
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(76, 201, 76);
+    
+}
+
+a.botao:hover, input[type="submit"]:hover, input[type="button"]:hover{
+    background-color: green;
+}
+
+
+input, select, a.botao {
+    font-size: 1em;
+}
+
+input[type="button"], 
+input[type="submit"] {
+    height: 2em;
+}
+
+a.botao {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+    padding: 0 0.4em;
+}
+a.botao.excluir{
+    background-color: rgb(240, 57, 57);
+}
+
+a.botao.excluir:hover{
+    background-color: rgb(156, 0, 0);
+}
+
+/*MAIN */
+main{
+    padding: 1em;
+    background-image: linear-gradient(#cccccc, white);
+}
+div#comandos{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0.1em;
+    flex-wrap: wrap; /*se nao houver espaço para caber tudo, pode quebrar*/
+}
