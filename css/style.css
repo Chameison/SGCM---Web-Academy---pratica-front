@@ -62,9 +62,7 @@ div#usuarioInfo a.botao {
         margin-top: 1em;
         text-align: left;
     }
-    header{
-
-    }
+    
 }
 
 
@@ -156,10 +154,10 @@ table tfoot td{
     text-align: center;
 }
 
-table td:last-child{
+table td:last-child, table td.fit {
     width: 1%;
     text-align: center;
-    white-space: nowrap; /*Como o espaço eme branco é tratado*/
+    white-space: nowrap;
 }
 table td{
     text-align: center; /*MEU*/
